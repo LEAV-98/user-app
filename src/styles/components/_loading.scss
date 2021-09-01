@@ -1,0 +1,9 @@
+.loading-container img {
+  max-height: 70vh !important;
+}
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

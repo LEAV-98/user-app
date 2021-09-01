@@ -1,0 +1,64 @@
+$line: red;
+$bg_tabs: rgba(219, 219, 219, 0.562);
+$bg_activeTabs: white;
+$color_tabs: black;
+.bloc-tabs {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.tabs {
+  padding: 10px;
+  width: calc(100% / 3);
+  background-color: $bg_tabs;
+  cursor: pointer;
+  position: relative;
+  color: $color_tabs;
+}
+
+.active-tabs {
+  background: $bg_activeTabs;
+  border-bottom: 1px solid transparent;
+}
+
+.active-tabs::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 5px;
+  background: $line;
+  animation: linetab;
+  animation-duration: 2s;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+.content-tabs {
+  flex-grow: 1;
+}
+.content {
+  padding: 10px 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  display: none;
+}
+
+.active-content {
+  opacity: 100;
+  display: block;
+}
+@keyframes linetab {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
