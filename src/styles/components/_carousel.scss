@@ -1,0 +1,78 @@
+.carousel-item {
+  height: calc(100vh - 6.4rem);
+  width: 100vw !important;
+
+  img {
+    height: 100%;
+    width: 100%;
+    filter: brightness(70%);
+  }
+  .carousel-info {
+    position: absolute;
+    color: white;
+    top: 0;
+    z-index: 100;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    img {
+      filter: brightness(100%);
+    }
+    h1 {
+      font-size: 5rem;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
+    p {
+      font-size: 2.2rem;
+    }
+    .span {
+      font-family: "Nothing You Could Do", cursive;
+      color: #fac564;
+      font-size: 2.5rem;
+    }
+    .content-img {
+      width: 40%;
+      height: 70%;
+    }
+    .btn {
+      font-size: 1.5rem;
+      padding: 1rem 2rem;
+    }
+    .content-text-1 {
+      width: 40%;
+      text-align: right;
+      font-family: "Nothing You Could Do", cursive;
+      font-family: "Poppins", sans-serif;
+
+      .btn-order {
+        border: 1px solid #fac564;
+        background-color: #fac564;
+        margin-right: 1rem;
+        &:hover {
+          background-color: transparent;
+          border: 1px solid #fac564;
+          color: #fac564;
+        }
+      }
+    }
+    .btn-view {
+      color: white;
+      border: 1px solid white;
+      &:hover {
+        background-color: #fac564;
+        border: 1px solid #fac564;
+        color: black;
+      }
+    }
+  }
+  .context-text-2 {
+    text-align: left !important;
+  }
+  .content-text-3 {
+    text-align: center !important;
+  }
+}

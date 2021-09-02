@@ -1,14 +1,55 @@
-.header__nav {
-  background-color: white !important;
+.header {
 }
-.portada {
-  background-image: url("./../../assets/fondo.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 100vw;
-  height: calc(100vh - 56px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.header__nav {
+  background-color: #121618 !important;
+  min-height: 6.4rem;
+  .navbar-brand,
+  .nav-link {
+    color: white !important;
+    font-size: 1.5rem;
+  }
+  .toggle-button {
+    color: white !important;
+    background-color: white !important;
+  }
+}
+.ubication-content {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  background-color: black;
+  .info {
+    color: grey;
+    width: 80%;
+    margin: 0 auto;
+    .info-item {
+      width: 30%;
+      p {
+        text-align: right;
+      }
+    }
+  }
+  .social-media {
+    background-color: #fac564;
+  }
+  .info,
+  .social-media {
+    padding: 3rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+  .d-inline {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    p {
+      color: white;
+      display: inline;
+      margin: 0;
+    }
+  }
+  .social-media {
+    justify-content: center;
+  }
 }

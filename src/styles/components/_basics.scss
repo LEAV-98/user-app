@@ -1,0 +1,28 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  /* 1 rem = 10px */
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+h2 {
+  font-size: 3rem;
+}
+h5 {
+  font-size: 2.5rem;
+}
+p {
+  font-size: 1.5rem;
+}
+button,
+.btn,
+a {
+  font-size: 1.8rem;
+}

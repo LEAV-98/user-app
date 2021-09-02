@@ -26,7 +26,7 @@ export const Header = () => {
       <>
         <nav className="navbar navbar-expand-lg navbar-light bg-light header__nav">
           <Link className="navbar-brand" to="/">
-            Pizzería
+            <h2>Pizzas</h2>
           </Link>
           <button
             className="navbar-toggler"
@@ -37,7 +37,7 @@ export const Header = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon toggle-button"></span>
           </button>
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -63,7 +63,7 @@ export const Header = () => {
                     </Link>
                   </li>
                   <li className="nav-item" onClick={handleLogout}>
-                    <span className="nav-link">Cerrar Sesión</span>
+                    <p className="nav-link my-0">Cerrar Sesión</p>
                   </li>
                 </>
               )}
