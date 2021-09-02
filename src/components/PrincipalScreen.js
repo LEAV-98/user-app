@@ -11,6 +11,7 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 import { yellow } from "@material-ui/core/colors";
+//import { Height } from "@material-ui/icons";
 
 export const PrincipalScreen = () => {
   const settings = {
@@ -28,12 +29,15 @@ export const PrincipalScreen = () => {
     <>
       <Header />
       <div>
-        <Slider {...settings} arrows={false}>
+        <Slider {...settings} arrows={false}
+          style={{
+            backgroundImage: 'url("https://res.cloudinary.com/dbnds4vtj/image/upload/v1630571845/bg_1_fwwobp.jpg")'
+          }}>
           <div className="carousel-item">
-            <img
+            {/* <img
               src="https://res.cloudinary.com/dbnds4vtj/image/upload/v1630571845/bg_1_fwwobp.jpg"
               alt="img"
-            />
+            /> */}
             <div className="carousel-info">
               <div className="content-text-1">
                 <span className="span">Delicious</span>
@@ -60,10 +64,10 @@ export const PrincipalScreen = () => {
             </div>
           </div>
           <div className="carousel-item">
-            <img
+            {/* <img
               src="https://res.cloudinary.com/dbnds4vtj/image/upload/v1630571845/bg_1_fwwobp.jpg"
               alt="img"
-            />
+            /> */}
             <div className="carousel-info">
               <div className="content-img">
                 <img
@@ -89,11 +93,7 @@ export const PrincipalScreen = () => {
               </div>
             </div>
           </div>
-          <div className="carousel-item">
-            <img
-              src="https://res.cloudinary.com/dbnds4vtj/image/upload/v1630571849/bg_3_e1dwjv.jpg"
-              alt="img"
-            />
+          <div className="carousel-item" >
             <div className="carousel-info">
               <div className="content-text-1 content-text-3">
                 <span className="span">Welcome</span>
@@ -112,6 +112,11 @@ export const PrincipalScreen = () => {
                 </p>
               </div>{" "}
             </div>
+            {/* <img
+              src="https://res.cloudinary.com/dbnds4vtj/image/upload/v1630571849/bg_3_e1dwjv.jpg"
+              alt="img"
+            /> */}
+
           </div>
         </Slider>
       </div>
