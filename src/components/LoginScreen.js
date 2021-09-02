@@ -18,7 +18,6 @@ import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import { Header } from "./Header";
 
 // get our fontawesome imports
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -92,53 +91,7 @@ export const LoginScreen = () => {
   const classes = useStyles();
 
   return (
-    <>{/* 
-      <div className="container">
-        <div className="row">
-          <div className="col-md-4 col-sm-10   mx-auto mt-3">
-            <Link to="/">Volver</Link>
-            <h1 className="text-center">Login</h1>
-            <form onSubmit={handleLogin}>
-              <div className="form-group">
-                <input
-                  className="form-control"
-                  type="text"
-                  placeholder="Usuario"
-                  name="email"
-                  value={email}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="form-group">
-                <input
-                  className="form-control"
-                  type="text"
-                  placeholder="Contraseña"
-                  name="password"
-                  value={password}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div>
-                <input
-                  type="submit"
-                  className="btn btn-success "
-                  value="ingresar"
-                />
-              </div>
-            </form>
-            <div className="mt-2">
-              <button className="btn btn-primary" onClick={handleGoogleLogin}>
-                Ingresa epicamente por Google
-              </button>
-            </div>
-            <p>
-              No tienes cuenta? <Link to="/auth/register">Registrate aquí</Link>
-            </p>
-          </div>
-        </div>
-      </div>
-       */}
+    <>
       <Grid container component="main" className={classes.root}>
         <CssBaseline />
 
