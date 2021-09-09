@@ -212,8 +212,7 @@ export const PrincipalScreen = () => {
             <div className="service-info">
               <h3>Comida Saludable</h3>
               <p>
-                Podrás recibir todas tus comidas en la puerta de tu casa u
-                oficina.
+                Usamos ingredientes orgánicos y de alta calidad.
               </p>
             </div>
           </div>
@@ -242,8 +241,7 @@ export const PrincipalScreen = () => {
             <div className="service-info">
               <h3>Receta Original</h3>
               <p>
-                Podrás recibir todas tus comidas en la puerta de tu casa u
-                oficina.
+                Tenemos los mejores ingredientes para que disfrutes de una pizza única.
               </p>
             </div>
           </div>
