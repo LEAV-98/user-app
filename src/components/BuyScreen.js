@@ -28,10 +28,12 @@ export const BuyScreen = () => {
   return (
     <>
       <Header />
-      <div className="container mt-2">
-        <Link to="/shopping">Volver al carrito</Link>
-        <div className="row">
-          <div className="col-md-6 col-sm-12">
+      <div className="container mt-5 pb-5">
+        <Link to="/shopping" className="btn-volver">
+          Volver al carrito
+        </Link>
+        <div className="contenedor-pedido">
+          <div className="pedido">
             <FormBuy
               isLoggedIn={isLoggedIn}
               auth={auth}
@@ -40,9 +42,9 @@ export const BuyScreen = () => {
             />
           </div>
           {shoppingCart.length !== 0 && (
-            <div className="col-md-6 col-sm-12">
+            <div className="resumen">
               <h2>Resumen de Pedido</h2>
-              <p>Cantidad de productos: {total}</p>
+              <p className="m-0">Cantidad de productos: {total}</p>
               <p>Precio Total: S/ {precio}</p>
             </div>
           )}

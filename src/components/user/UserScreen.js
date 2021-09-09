@@ -9,7 +9,7 @@ export const UserScreen = () => {
   const [orders, setOrders] = useState([]);
   useEffect(() => {
     db.collection("orders")
-      .orderBy("tiempo", "asc")
+      .orderBy("tiempo", "desc")
       .onSnapshot((snapshot) => {
         const newOrders = snapshot.docs.map((doc) => ({
           id: doc.id,
@@ -25,17 +25,15 @@ export const UserScreen = () => {
   return (
     <>
       <Header />
-      <main className="mt-2">
-        <div className="container">
-          <h2 className="text-center">Bienvenido {auth.name}</h2>
-          <h3>Tus Ordenes</h3>
-          {orders.length === 0 ? (
-            "No hay ordenes en tu cuenta"
-          ) : (
-            <UserList orders={orders} />
-          )}
-        </div>
-      </main>
+      <div className="container contenedor-usuario">
+        <h2 className="text-center text-capitalize">Bienvenido {auth.name}</h2>
+        <h3>Tus Ordenes</h3>
+        {orders.length === 0 ? (
+          <p>No hay ordenes en tu cuenta</p>
+        ) : (
+          <UserList orders={orders} />
+        )}
+      </div>
     </>
   );
 };

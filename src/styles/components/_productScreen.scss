@@ -1,0 +1,58 @@
+.bg-pizzas {
+  background-image: url(https://res.cloudinary.com/dbnds4vtj/image/upload/v1630647458/fatima-akram-uU0Anw-8Vsg-unsplash_2_ftuf6p.jpg);
+  height: calc(100vh - 6.4rem);
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bg-combos {
+  background-image: url(https://res.cloudinary.com/dbnds4vtj/image/upload/v1630647458/heather-ford-_U4F6pyOQRs-unsplash_loszbk.jpg);
+  height: calc(100vh - 6.4rem);
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bg-pastas {
+  background-image: url(https://res.cloudinary.com/dbnds4vtj/image/upload/v1630647458/logan-liu-ChiwFiptCoY-unsplash_inbw8h.jpg);
+  height: calc(100vh - 6.4rem);
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.content-item {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  color: white;
+  column-gap: 2rem;
+}
+.item {
+  display: flex;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  gap: 2rem;
+  padding: 0 2rem;
+  .btn-order {
+    background-color: #fac564;
+    &:hover {
+      background-color: transparent;
+      border: 1px solid white;
+      color: white;
+    }
+  }
+}
+.item-section h1 {
+  font-family: "Nothing You Could Do", cursive;
+  color: #fac564;
+  padding: 2rem 0;
+}
+@media (max-width: 768px) {
+  .bg-combos,
+  .bg-pastas,
+  .bg-pizzas {
+    display: none;
+  }
+  .content-item {
+    padding: 0 2rem;
+    display: block;
+  }
+}

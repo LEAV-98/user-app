@@ -12,8 +12,17 @@ html {
   padding: 0;
   margin: 0;
 }
+h1 {
+  font-size: 3.4rem;
+}
 h2 {
   font-size: 3rem;
+}
+h3 {
+  font-size: 2.8rem;
+}
+h4 {
+  font-size: 2.7rem;
 }
 h5 {
   font-size: 2.5rem;
@@ -25,4 +34,31 @@ button,
 .btn,
 a {
   font-size: 1.8rem;
+}
+input {
+  font-size: 1.8rem !important;
+}
+
+body {
+  background-image: url(https://res.cloudinary.com/dbnds4vtj/image/upload/v1630593572/bg_4_fwkphy.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-principal {
+  min-height: 100vh;
+}
+.btn-swal2 {
+  font-size: 1.6rem !important;
+}
+.title-swal2 {
+  font-size: 3rem !important;
+}
+.container-swal2 {
+  width: 70% !important;
+}
+.swal2-container {
+  width: 100% !important;
+}
+.swal2-html-container {
+  font-size: 1.5rem !important;
 }

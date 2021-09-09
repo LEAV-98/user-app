@@ -1,10 +1,10 @@
 import { types } from "../types/types";
 import Swal from "sweetalert2";
 export const initAddProduct = (product) => {
-  return (dispacth) => {
-    dispacth(addProduct(product));
+  return (dispatch) => {
+    dispatch(addProduct(product));
     Swal.fire({
-      title: "añadido a tu carrito :D",
+      title: "Añadido a tu carrito :D",
       icon: "success",
       showConfirmButton: false,
       timer: 2000,
@@ -24,6 +24,13 @@ export const initDeleteAll = () => {
       showDenyButton: true,
       confirmButtonText: `Si`,
       denyButtonText: `No`,
+      padding: "3rem",
+      customClass: {
+        denyButton: "btn-swal2",
+        actions: "btn-swal2",
+        title: "title-swal2",
+        popup: "container-swal2",
+      },
     }).then((result) => {
       if (result.isConfirmed) {
         Swal.fire("Eiminado", "", "success");

@@ -9,19 +9,21 @@ export const ProductItem = ({ product }) => {
     dispatch(initAddProduct(product));
   };
   return (
-    <div className="col-sm-6 col-md-3 mb-4">
-      <div className="card">
-        <img className="card-img-top" src={product.imagenUrl} alt="img" />
+    <div className="product-item">
+      <div className="item-img">
+        <img src={product.imagenUrl} alt="img" />
 
-        <div className="card-body">
-          <h5 className="card-title">{product.title}</h5>
-          <p className="card-text">Precio: S/{product.precio}</p>
+        <div className="item-info">
+          <h5>{product.title}</h5>
+          <p className="precio">
+            Precio: <span> S/{product.precio}</span>
+          </p>
         </div>
-        <div className="card-footer text-muted btn-group">
-          <button className="btn btn-danger" onClick={handleAdd}>
+        <div className="item-actions">
+          <button onClick={handleAdd} className="btn btn-order">
             Pedir
           </button>
-          <Link to={`/products/${product.id}`} className="btn btn-primary">
+          <Link to={`/products/${product.id}`} className="btn btn-more-details">
             Ver más detalles
           </Link>
         </div>

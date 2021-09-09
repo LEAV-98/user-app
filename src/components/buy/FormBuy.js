@@ -8,12 +8,12 @@ import { validate } from "email-validator";
 
 export const FormBuy = ({ isLoggedIn, auth, shoppingCart, precio }) => {
   const [inputValues, handleInputChange] = useForm({
-    nombre: "1234n",
-    apellido: "1234a",
-    email: "1234e",
-    telefono: "1234t",
-    direccion: "1234d",
-    referencia: "1234r",
+    nombre: "",
+    apellido: "",
+    email: "",
+    telefono: "",
+    direccion: "",
+    referencia: "",
   });
   const { nombre, apellido, email, telefono, direccion, referencia } =
     inputValues;
@@ -33,11 +33,16 @@ export const FormBuy = ({ isLoggedIn, auth, shoppingCart, precio }) => {
       referencia === ""
     ) {
       Swal.fire({
-        title: "Campos Vacios, no seas imbecil",
-        text: "Si lees esto es porque no completas todo ps weon",
+        title: "Campos Vacios",
         icon: "error",
         showConfirmButton: false,
         timer: 4000,
+        customClass: {
+          denyButton: "btn-swal2",
+          actions: "btn-swal2",
+          title: "title-swal2",
+          popup: "container-swal2",
+        },
       });
       return;
     }
@@ -51,6 +56,7 @@ export const FormBuy = ({ isLoggedIn, auth, shoppingCart, precio }) => {
       shoppingCart,
       precio
     );
+    // dispatch(deleteAll());
   };
   const handleSubmitWithoutLogin = () => {
     console.log("sin cuenta");
@@ -62,20 +68,31 @@ export const FormBuy = ({ isLoggedIn, auth, shoppingCart, precio }) => {
       referencia === ""
     ) {
       Swal.fire({
-        title: "Campos Vacios, no seas imbecil",
-        text: "Si lees esto es porque no completas todo ps weon",
+        title: "Campos Vacios",
         icon: "error",
         showConfirmButton: false,
         timer: 4000,
+        customClass: {
+          denyButton: "btn-swal2",
+          actions: "btn-swal2",
+          title: "title-swal2",
+          popup: "container-swal2",
+        },
       });
       return;
     }
     if (!validate(email)) {
       Swal.fire({
-        title: "Escribe un email valido pndejo",
+        title: "Formato de Email Inválido",
         icon: "error",
         showConfirmButton: false,
         timer: 2000,
+        customClass: {
+          denyButton: "btn-swal2",
+          actions: "btn-swal2",
+          title: "title-swal2",
+          popup: "container-swal2",
+        },
       });
       return;
     }
@@ -92,7 +109,7 @@ export const FormBuy = ({ isLoggedIn, auth, shoppingCart, precio }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="form-pedido">
       <h2>
         {isLoggedIn
           ? "Bienvenido, registra tu pedido"
@@ -100,12 +117,15 @@ export const FormBuy = ({ isLoggedIn, auth, shoppingCart, precio }) => {
       </h2>
       {!isLoggedIn && (
         <p>
-          Si ya tiene una cuenta, <Link to="/auth/login">Ingrese aquí</Link>
+          Si ya tiene una cuenta,{" "}
+          <Link to="/auth/login" className="btn-login">
+            Ingrese aquí
+          </Link>
         </p>
       )}
       {isLoggedIn && (
         <div>
-          <p>Nombre: {auth.name}</p>
+          <p className="text-capitalize">Nombre: {auth.name}</p>
           <p>Correo: {auth.email}</p>
         </div>
       )}
@@ -176,7 +196,7 @@ export const FormBuy = ({ isLoggedIn, auth, shoppingCart, precio }) => {
         />
       </div>
       <div className="form-group">
-        <input type="submit" className="btn btn-primary" value="Hacer Pedido" />
+        <input type="submit" className="btn-form" value="Hacer Pedido" />
       </div>
     </form>
   );

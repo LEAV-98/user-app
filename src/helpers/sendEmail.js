@@ -17,6 +17,12 @@ export const sendEmail = (nombre, email, telefono, direccion, referencia) => {
           icon: "success",
           showConfirmButton: false,
           timer: 4000,
+          customClass: {
+            denyButton: "btn-swal2",
+            actions: "btn-swal2",
+            title: "title-swal2",
+            popup: "container-swal2",
+          },
         });
       },
       function (error) {
@@ -27,7 +33,20 @@ export const sendEmail = (nombre, email, telefono, direccion, referencia) => {
           icon: "success",
           showConfirmButton: false,
           timer: 4000,
+          customClass: {
+            denyButton: "btn-swal2",
+            actions: "btn-swal2",
+            title: "title-swal2",
+            popup: "container-swal2",
+          },
         });
       }
     );
+  // Swal.fire({
+  //   title: "Pedido Realizado",
+  //   text: "En unos instantes recibiras un correo de confirmación",
+  //   icon: "success",
+  //   showConfirmButton: false,
+  //   // timer: 4000,
+  // });
 };

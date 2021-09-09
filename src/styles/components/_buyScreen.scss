@@ -1,0 +1,47 @@
+.contenedor-pedido {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.pedido {
+  color: white;
+}
+.resumen {
+  color: white;
+}
+.btn-form {
+  background-color: #fac564;
+  border: 1px solid #fac564;
+  color: black;
+  margin-top: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none !important;
+  &:hover {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+  }
+}
+.btn-volver {
+  color: rgb(202, 198, 198);
+  border: none;
+  text-decoration: none !important;
+  &:hover {
+    color: white;
+  }
+}
+.btn-login {
+  color: #fac564;
+
+  &:hover {
+    color: #fac564;
+  }
+}
+@media (max-width: 768px) {
+  .contenedor-pedido {
+    flex-direction: column;
+  }
+}

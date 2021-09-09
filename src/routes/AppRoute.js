@@ -44,7 +44,7 @@ export const AppRoute = () => {
   return (
     <>
       <Router>
-        <div>
+        <div className="bg-principal">
           <Switch>
             <PublicRoute
               path="/auth"

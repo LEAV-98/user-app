@@ -16,9 +16,6 @@ export const ShoppingCartScreen = () => {
   const shoppingCart = useSelector((state) => state.shoppingCart);
   const dispatch = useDispatch();
 
-  const handleDeleteAll = () => {
-    dispatch(initDeleteAll());
-  };
   const handleDecrease = (id) => {
     console.log("c disminuye*");
     dispatch(decreaseItem(id));
@@ -31,6 +28,10 @@ export const ShoppingCartScreen = () => {
     console.log("c elimina*");
     dispatch(deleteProduct(id));
   };
+  const handleDeleteAll = () => {
+    dispatch(initDeleteAll());
+  };
+
   useEffect(() => {
     // console.log(shoppingCart);
     localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
@@ -41,78 +42,74 @@ export const ShoppingCartScreen = () => {
   return (
     <>
       <Header />
-      <div className="container mt-2 ">
+      <div className="container ">
         {shoppingCart.length === 0 && (
-          <div className="d-flex justify-content-center align-items-center flex-column mt-5">
+          <div className="contenedor-vacio">
             <h2>Aun no hay productos añadidos a tu carrito de compra</h2>
-            <Link className="btn btn-success" to="/products">
+            <Link className="btn-products" to="/products">
               Ir a la Tienda
             </Link>
           </div>
         )}
         {shoppingCart.length !== 0 && (
-          <button className="btn btn-danger mb-2" onClick={handleDeleteAll}>
-            Eliminar Todo
+          <button className="btn-red btn my-4" onClick={handleDeleteAll}>
+            Vaciar Carrito
           </button>
         )}
-        <div className="row">
-          <div className="col-md-8 col-sm-12">
+        <div className="contenedor-compra">
+          <div className="compra-items">
             {shoppingCart.map((product, i) => (
-              <div key={i} className="card">
-                <div className="row d-flex justify-content-center align-items-center">
-                  <div className="col-md-4 col-sm-12 text-center">
-                    <img
-                      className="img-fluid"
-                      src={product.imagenUrl}
-                      alt="img"
-                    />
-                  </div>
-                  <div className="col-md-4 col-sm-12">
-                    <h2 className="text-center">{product.title}</h2>
-                    <div className="my-0 text-center">
-                      <p>Cantidad</p>
-                      <div className="my-1">
-                        <button
-                          className="btn btn-primary mr-1"
-                          onClick={() => {
-                            handleDecrease(product.id);
-                          }}
-                          disabled={product.cantidad === 1 && "disabled"} //solucion a nivel de diseño porque me dio perecita hacer la logica ajio ajio
-                        >
-                          -
-                        </button>
-                        <p className="d-inline"> {product.cantidad}</p>
-                        <button
-                          className="btn btn-primary ml-2"
-                          onClick={() => {
-                            handleIncrease(product.id);
-                          }}
-                        >
-                          +
-                        </button>
-                      </div>
+              <div className="item-shop" key={i}>
+                <div className="item-shop__img">
+                  <img className="" src={product.imagenUrl} alt="img" />
+                </div>
+                <div className="">
+                  <h2 className="">{product.title}</h2>
+                  <div className="">
+                    <p>Cantidad</p>
+                    <div className="btn-group-number">
+                      <button
+                        onClick={() => {
+                          handleDecrease(product.id);
+                        }}
+                        disabled={product.cantidad === 1 && "disabled"}
+                      >
+                        -
+                      </button>
+                      <p className="m-0"> {product.cantidad}</p>
+                      <button
+                        className=""
+                        onClick={() => {
+                          handleIncrease(product.id);
+                        }}
+                      >
+                        +
+                      </button>
+                    </div>
+                    <div>
+                      <p> Precio por unidad: {product.precio}</p>
                     </div>
                   </div>
-                  <div className="col-md-4 col-sm-12 text-center">
-                    <button
-                      className="btn btn-danger "
-                      onClick={() => {
-                        handleDeleteProduct(product.id);
-                      }}
-                    >
-                      Eliminar
-                    </button>
-                  </div>
+                </div>
+                <div className="">
+                  <button
+                    className="btn btn-red"
+                    onClick={() => {
+                      handleDeleteProduct(product.id);
+                    }}
+                  >
+                    Quitar producto
+                  </button>
                 </div>
               </div>
             ))}
           </div>
           {shoppingCart.length !== 0 && (
-            <div className="col-md-4 col-sm-12">
+            <div className="compra-info">
               <h2>Resumen de Pedido</h2>
-              <p>Cantidad de productos: {total}</p>
-              <p>Precio Total: S./{precio}</p>
-              <Link to="/buy" className="btn btn-success">
+              <p className="my-2">Cantidad de productos: {total}</p>
+              <p className="mb-4">Precio Total: S./{precio}</p>
+              <Link to="/buy" className="btn btn-effect up">
                 Realizar Pedido
               </Link>
             </div>

@@ -4,6 +4,7 @@
 
   img {
     height: 100%;
+    //revisanding
     width: 100%;
     filter: brightness(70%);
   }
@@ -74,5 +75,15 @@
   }
   .content-text-3 {
     text-align: center !important;
+  }
+}
+@media (max-width: 769px) {
+  .carousel-info {
+    .content-img {
+      display: none;
+    }
+    .content-text-1 {
+      width: 80% !important;
+    }
   }
 }

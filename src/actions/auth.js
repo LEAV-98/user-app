@@ -14,6 +14,12 @@ export const startLoginEmailPassword = (email, password) => {
           icon: "success",
           showConfirmButton: false,
           timer: 2000,
+          customClass: {
+            denyButton: "btn-swal2",
+            actions: "btn-swal2",
+            title: "title-swal2",
+            popup: "container-swal2",
+          },
         });
       })
       .catch((e) => {
@@ -36,6 +42,12 @@ export const startRegisterWithEmailPasswordName = (email, password, name) => {
           icon: "success",
           showConfirmButton: false,
           timer: 2000,
+          customClass: {
+            denyButton: "btn-swal2",
+            actions: "btn-swal2",
+            title: "title-swal2",
+            popup: "container-swal2",
+          },
         });
       })
       .catch((e) => {
@@ -44,6 +56,12 @@ export const startRegisterWithEmailPasswordName = (email, password, name) => {
           icon: "error",
           showConfirmButton: false,
           timer: 2000,
+          customClass: {
+            denyButton: "btn-swal2",
+            actions: "btn-swal2",
+            title: "title-swal2",
+            popup: "container-swal2",
+          },
         });
       });
   };
@@ -86,6 +104,12 @@ export const startLogout = () => {
       icon: "warning",
       showConfirmButton: false,
       timer: 2000,
+      customClass: {
+        denyButton: "btn-swal2",
+        actions: "btn-swal2",
+        title: "title-swal2",
+        popup: "container-swal2",
+      },
     });
   };
 };

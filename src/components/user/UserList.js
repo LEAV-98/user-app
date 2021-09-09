@@ -3,7 +3,7 @@ import { UserItem } from "./UserItem";
 
 export const UserList = ({ orders }) => {
   return (
-    <div className="row">
+    <div className="list-ordenes">
       {orders.map((order, i) => (
         <UserItem order={order} key={order.id} />
       ))}

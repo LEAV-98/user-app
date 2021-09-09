@@ -29,44 +29,48 @@ export const OrderScreen = () => {
     <>
       <Header />
       <div className="container mt-2">
-        <Link to="/user">Volver</Link>
-        <h2>Pedido N° {order.id}</h2>
-        <p>
-          Pedido realizado el{" "}
-          {moment(order.tiempo).format("Do MMMM YYYY, h:mm:ss a")}
-        </p>
-        <p className="d-inline mr-2">Estado del pedido</p>
-        <button
-          className={
-            order.estado === "Por Confirmar"
-              ? "btn btn-danger "
-              : order.estado === "Enviado"
-              ? "btn btn-warning"
-              : "btn btn-primary"
-          }
-        >
-          {order.estado}
-        </button>
-        <p>Precio total: S./{order.precioTotal}</p>
-        <p>Dirección: {order.direccion}</p>
-        <p>Referencia: {order.referencia}</p>
-        <p>Telefono de Contacto: {order.telefono}</p>
-        <p>Tu pedido fue</p>
-        <div className="row">
-          {order.shoppingCart?.map((product) => (
-            <div className="card col-md-4 col-sm-12">
-              <img className="card-img-top" alt="img" src={product.imagenUrl} />
-              <div className="card-body">
-                <Link
-                  className="card-title text-dark"
-                  to={`/products/${product.id}`}
-                >
-                  {product.title}
-                </Link>
-                <p className="card-text">Cantidad: {product.cantidad}</p>
+        <div className="contenedor-orden">
+          <Link to="/user" className="btn-order-volver">
+            Volver
+          </Link>
+          <h2>Pedido N° {order.id}</h2>
+          <p>
+            Pedido realizado el{" "}
+            {moment(order.tiempo).format("Do MMMM YYYY, h:mm:ss a")}
+          </p>
+          <p className="d-inline mr-2">Estado del pedido</p>
+          <button
+            className={
+              order.estado === "Por Confirmar"
+                ? "btn btn-danger "
+                : order.estado === "Enviado"
+                ? "btn btn-warning"
+                : "btn btn-success"
+            }
+          >
+            {order.estado}
+          </button>
+          <p>Precio total: S./{order.precio}</p>
+          <p>Dirección: {order.direccion}</p>
+          <p>Referencia: {order.referencia}</p>
+          <p>Telefono de Contacto: {order.telefono}</p>
+          <p>Tu pedido fue</p>
+          <div className="order-items">
+            {order.shoppingCart?.map((product, i) => (
+              <div className="" key={i}>
+                <img className="" alt="img" src={product.imagenUrl} />
+                <div className="">
+                  <Link
+                    className="btn-name-product"
+                    to={`/products/${product.id}`}
+                  >
+                    {product.title}
+                  </Link>
+                  <p className="">Cantidad: {product.cantidad}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </>

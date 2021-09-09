@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { startLogout } from "../actions/auth";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import MenuIcon from "@material-ui/icons/Menu";
 export const Header = () => {
   const { auth } = useSelector((state) => state);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -25,11 +26,15 @@ export const Header = () => {
     <header className="header">
       <>
         <nav className="navbar navbar-expand-lg navbar-light bg-light header__nav">
-          <Link className="navbar-brand" to="/">
-            <h2>Pizzas</h2>
+          <Link className="navbar-brand " to="/">
+            <img
+              src="https://res.cloudinary.com/dbnds4vtj/image/upload/v1631155067/pizza-mickuy-logo_urahso.png"
+              className="img-banner"
+              alt="banner"
+            />
           </Link>
           <button
-            className="navbar-toggler"
+            className="navbar-toggler "
             type="button"
             data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -37,7 +42,7 @@ export const Header = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon toggle-button"></span>
+            <MenuIcon style={{ color: "white", fontSize: 25 }} />
           </button>
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -46,19 +51,19 @@ export const Header = () => {
                 <>
                   <li className="nav-item ">
                     <Link className="nav-link" to="/auth/login">
-                      Login
+                      Iniciar Sesión
                     </Link>
                   </li>
                   <li className="nav-item ">
                     <Link className="nav-link  " to="/auth/register">
-                      Register
+                      Registrarse
                     </Link>
                   </li>
                 </>
               ) : (
                 <>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/user">
+                    <Link className="nav-link text-capitalize" to="/user">
                       {auth.name}
                     </Link>
                   </li>
@@ -70,7 +75,7 @@ export const Header = () => {
 
               <li className="nav-item ">
                 <Link className="nav-link " to="/products">
-                  Products
+                  Menú
                 </Link>
               </li>
               {/* <li className="nav-item ">
