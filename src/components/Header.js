@@ -47,6 +47,16 @@ export const Header = () => {
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ml-auto">
+              <li className="nav-item ">
+                <Link className="nav-link " to="/">
+                  Inicio
+                </Link>
+              </li>
+              <li className="nav-item ">
+                <Link className="nav-link " to="/products">
+                  Menú
+                </Link>
+              </li>
               {!isLoggedIn ? (
                 <>
                   <li className="nav-item ">
@@ -68,16 +78,12 @@ export const Header = () => {
                     </Link>
                   </li>
                   <li className="nav-item" onClick={handleLogout}>
-                    <p className="nav-link my-0">Cerrar Sesión</p>
+                    <p className="nav-link my-0" style={{ cursor: "pointer" }}>
+                      Cerrar Sesión
+                    </p>
                   </li>
                 </>
               )}
-
-              <li className="nav-item ">
-                <Link className="nav-link " to="/products">
-                  Menú
-                </Link>
-              </li>
               {/* <li className="nav-item ">
                 <Link className="nav-link" to="/">
                   About Us

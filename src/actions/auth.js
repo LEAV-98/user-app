@@ -36,7 +36,7 @@ export const startRegisterWithEmailPasswordName = (email, password, name) => {
       .then(async ({ user }) => {
         await user.updateProfile({ displayName: name });
 
-        dispatch(login(user.uid, user.displayName));
+        dispatch(login(user.uid, user.displayName, user.email));
         Swal.fire({
           title: "Registrado correctamente",
           icon: "success",
