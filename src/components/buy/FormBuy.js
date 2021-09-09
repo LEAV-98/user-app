@@ -1,12 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { useForm } from "../../hooks/useForm";
 import Swal from "sweetalert2";
 import { sendEmail } from "../../helpers/sendEmail";
 import { addBuyFirebase } from "../../helpers/firebase-actions";
 import { validate } from "email-validator";
+import { useDispatch } from "react-redux";
 
 export const FormBuy = ({ isLoggedIn, auth, shoppingCart, precio }) => {
+  const dispatch = useDispatch();
+  const history = useHistory();
   const [inputValues, handleInputChange] = useForm({
     nombre: "",
     apellido: "",
@@ -46,7 +49,7 @@ export const FormBuy = ({ isLoggedIn, auth, shoppingCart, precio }) => {
       });
       return;
     }
-    sendEmail(auth.name, auth.email, telefono, direccion, referencia);
+    sendEmail(auth.name, auth.email, telefono, direccion, referencia, history);
     addBuyFirebase(
       auth.name,
       auth.email,
@@ -54,9 +57,22 @@ export const FormBuy = ({ isLoggedIn, auth, shoppingCart, precio }) => {
       direccion,
       referencia,
       shoppingCart,
-      precio
+      precio,
+      dispatch
     );
     // dispatch(deleteAll());
+    Swal.fire({
+      title: "Exitoso",
+      icon: "success",
+      showConfirmButton: false,
+      timer: 2000,
+      customClass: {
+        denyButton: "btn-swal2",
+        actions: "btn-swal2",
+        title: "title-swal2",
+        popup: "container-swal2",
+      },
+    });
   };
   const handleSubmitWithoutLogin = () => {
     console.log("sin cuenta");
@@ -96,7 +112,7 @@ export const FormBuy = ({ isLoggedIn, auth, shoppingCart, precio }) => {
       });
       return;
     }
-    sendEmail(nombre, email, telefono, direccion, referencia);
+    sendEmail(nombre, email, telefono, direccion, referencia, history);
     addBuyFirebase(
       nombre,
       email,
@@ -104,7 +120,8 @@ export const FormBuy = ({ isLoggedIn, auth, shoppingCart, precio }) => {
       direccion,
       referencia,
       shoppingCart,
-      precio
+      precio,
+      dispatch
     );
   };
 
