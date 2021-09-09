@@ -42,9 +42,9 @@ export const OrderScreen = () => {
           <button
             className={
               order.estado === "Por Confirmar"
-                ? "btn btn-danger "
+                ? "btn btn-warning "
                 : order.estado === "Enviado"
-                ? "btn btn-warning"
+                ? "btn btn-primary"
                 : "btn btn-success"
             }
           >

@@ -149,7 +149,7 @@ export const FormBuy = ({ isLoggedIn, auth, shoppingCart, precio }) => {
       <div className="form-group">
         {!isLoggedIn && (
           <input
-            className="form-control"
+            className="form-control-custom"
             type="text"
             placeholder="Nombre"
             onChange={handleInputChange}
@@ -161,7 +161,7 @@ export const FormBuy = ({ isLoggedIn, auth, shoppingCart, precio }) => {
       <div className="form-group">
         {!isLoggedIn && (
           <input
-            className="form-control"
+            className="form-control-custom"
             type="text"
             placeholder="Apellido"
             onChange={handleInputChange}
@@ -172,7 +172,7 @@ export const FormBuy = ({ isLoggedIn, auth, shoppingCart, precio }) => {
       </div>
       <div className="form-group">
         <input
-          className="form-control"
+          className="form-control-custom"
           type="tel"
           placeholder="Telefono"
           onChange={handleInputChange}
@@ -183,7 +183,7 @@ export const FormBuy = ({ isLoggedIn, auth, shoppingCart, precio }) => {
       <div className="form-group">
         {!isLoggedIn && (
           <input
-            className="form-control"
+            className="form-control-custom"
             type="text"
             placeholder="Correo Electrónico"
             onChange={handleInputChange}
@@ -194,7 +194,7 @@ export const FormBuy = ({ isLoggedIn, auth, shoppingCart, precio }) => {
       </div>
       <div className="form-group">
         <input
-          className="form-control"
+          className="form-control-custom"
           type="text"
           placeholder="Dirección"
           onChange={handleInputChange}
@@ -204,7 +204,7 @@ export const FormBuy = ({ isLoggedIn, auth, shoppingCart, precio }) => {
       </div>
       <div className="form-group">
         <input
-          className="form-control"
+          className="form-control-custom"
           type="text"
           placeholder="Referencia"
           onChange={handleInputChange}
