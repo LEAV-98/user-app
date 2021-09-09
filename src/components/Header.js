@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { startLogout } from "../actions/auth";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import MenuIcon from "@material-ui/icons/Menu";
-import PhoneIcon from '@material-ui/icons/Phone';
+import PhoneIcon from "@material-ui/icons/Phone";
 
 export const Header = () => {
   const { auth } = useSelector((state) => state);
@@ -36,11 +36,13 @@ export const Header = () => {
             />
           </Link>
           <div className="nav-item">
-            <Link className="nav-link d-flex align-items-center"
-              style={{ color: "#fac564" }}>
+            <div
+              className="nav-link d-flex align-items-center"
+              style={{ color: "#fac564" }}
+            >
               <PhoneIcon className="ml-0" />
               <p className="my-0 ml-2">926513695</p>
-            </Link>
+            </div>
           </div>
           <button
             className="navbar-toggler "
