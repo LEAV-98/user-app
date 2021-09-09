@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import { startLogout } from "../actions/auth";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import MenuIcon from "@material-ui/icons/Menu";
+import PhoneIcon from '@material-ui/icons/Phone';
+
 export const Header = () => {
   const { auth } = useSelector((state) => state);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -25,7 +27,7 @@ export const Header = () => {
   return (
     <header className="header">
       <>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light header__nav">
+        <nav className="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light">
           <Link className="navbar-brand " to="/">
             <img
               src="https://res.cloudinary.com/dbnds4vtj/image/upload/v1631155067/pizza-mickuy-logo_urahso.png"
@@ -33,6 +35,13 @@ export const Header = () => {
               alt="banner"
             />
           </Link>
+          <div className="nav-item">
+            <Link className="nav-link d-flex align-items-center"
+              style={{ color: "#fac564" }}>
+              <PhoneIcon className="ml-0" />
+              <p className="my-0 ml-2">926513695</p>
+            </Link>
+          </div>
           <button
             className="navbar-toggler "
             type="button"
