@@ -42,12 +42,15 @@ export const PrincipalScreen = () => {
   return (
     <>
       <Header />
-      <Slider {...settings} arrows={false}>
+
+      <Slider {...settings} arrows={false} style={{
+            backgroundImage: 'url("https://res.cloudinary.com/dbnds4vtj/image/upload/v1630571845/bg_1_fwwobp.jpg")'
+          }}>
         <div className="carousel-item">
-          <img
+          {/* <img
             src="https://res.cloudinary.com/dbnds4vtj/image/upload/v1630571845/bg_1_fwwobp.jpg"
             alt="img"
-          />
+          /> */}
           <div className="carousel-info">
             <div className="content-text-1">
               <span className="span">Delicious</span>
@@ -71,10 +74,10 @@ export const PrincipalScreen = () => {
           </div>
         </div>
         <div className="carousel-item">
-          <img
+          {/* <img
             src="https://res.cloudinary.com/dbnds4vtj/image/upload/v1630571845/bg_1_fwwobp.jpg"
             alt="img"
-          />
+          /> */}
           <div className="carousel-info">
             <div className="content-img">
               <img
@@ -102,9 +105,11 @@ export const PrincipalScreen = () => {
           </div>
         </div>
         <div className="carousel-item">
+          
           <img
             src="https://res.cloudinary.com/dbnds4vtj/image/upload/v1630571849/bg_3_e1dwjv.jpg"
             alt="img"
+            style = {{width: "99vw", height: "100%"}}
           />
           <div className="carousel-info">
             <div className="content-text-1 content-text-3">
@@ -120,6 +125,7 @@ export const PrincipalScreen = () => {
           </div>
         </div>
       </Slider>
+
       <div className="ubication-content">
         <div className="info">
           <div className="info-item">
@@ -163,6 +169,7 @@ export const PrincipalScreen = () => {
           </div>
         </div>
       </div>
+
       <div className="about-us-content">
         <div className="img-content">
           <img
@@ -191,6 +198,7 @@ export const PrincipalScreen = () => {
           </p>
         </div>
       </div>
+
       <div className="services-content">
         <h2>Nuestros Servicios</h2>
         <div className="services-items">
