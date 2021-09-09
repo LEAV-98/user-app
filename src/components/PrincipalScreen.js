@@ -14,6 +14,7 @@ import { yellow } from "@material-ui/core/colors";
 import LocalPizzaIcon from "@material-ui/icons/LocalPizza";
 import Icon from "@material-ui/core/Icon";
 import { loadCSS } from "fg-loadcss";
+//import { Height } from "@material-ui/icons";
 
 export const PrincipalScreen = () => {
   useEffect(() => {
@@ -93,6 +94,10 @@ export const PrincipalScreen = () => {
                 </Link>
               </p>
             </div>
+            {/* <img
+              src="https://res.cloudinary.com/dbnds4vtj/image/upload/v1630571849/bg_3_e1dwjv.jpg"
+              alt="img"
+            /> */}
           </div>
         </div>
         <div className="carousel-item">
