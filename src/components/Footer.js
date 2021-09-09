@@ -10,9 +10,10 @@ export const Footer = () => {
       <div className="footer__nosotros">
         <h3>Nosotros</h3>
         <p>
-        Mikuy es una palabra que representa la experiencia de sentarse a comer con los seres queridos. 
-        La emoción que representa compartir una comida con personas especiales fue el motivo principal para
-        crear esta pequeña empresa.
+          Mikuy es una palabra que representa la experiencia de sentarse a comer
+          con los seres queridos. La emoción que representa compartir una comida
+          con personas especiales fue el motivo principal para crear esta
+          pequeña empresa.
         </p>
       </div>
       <div className="footer__servicios">
@@ -35,7 +36,7 @@ export const Footer = () => {
           <PhoneIcon style={{ color: "white", fontSize: 20 }} />
           <p>926513695</p>
         </div>
-        <div className="footer__contactos-item">
+        <div className="footer__contactos-item" style={{ textAlign: "left" }}>
           <GpsFixedIcon style={{ color: "white", fontSize: 20 }} />
           <p>Avenida Nuevo Horizonte Carapongo - Los Álamos</p>
         </div>
