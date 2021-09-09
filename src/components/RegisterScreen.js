@@ -108,7 +108,7 @@ export const RegisterScreen = () => {
               <LockOutlinedIcon />
             </Avatar>
             <Typography component="h1" variant="h3">
-              Register
+              Registro
             </Typography>
 
             <form onSubmit={handleRegister} className={classes.form}>
@@ -118,7 +118,7 @@ export const RegisterScreen = () => {
                 required
                 fullWidth
                 id="name"
-                label="Username"
+                label="Nombre de usuario"
                 name="name"
                 value={name}
                 onChange={handleInputChange}
@@ -131,7 +131,7 @@ export const RegisterScreen = () => {
                 required
                 fullWidth
                 id="email"
-                label="Email Address"
+                label="Dirección de correo electrónico"
                 name="email"
                 value={email}
                 onChange={handleInputChange}
@@ -146,7 +146,7 @@ export const RegisterScreen = () => {
                 name="password"
                 value={password}
                 onChange={handleInputChange}
-                label="Password"
+                label="Contraseña"
                 type="password"
                 id="password"
                 autoComplete="current-password"
@@ -159,7 +159,7 @@ export const RegisterScreen = () => {
                 name="newPassword"
                 value={newPassword}
                 onChange={handleInputChange}
-                label="Repeat Password"
+                label="Repetir Contraseña"
                 type="password"
                 id="newPassword"
                 autoComplete="current-password"

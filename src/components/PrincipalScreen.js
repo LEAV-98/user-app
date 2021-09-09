@@ -53,11 +53,11 @@ export const PrincipalScreen = () => {
           /> */}
           <div className="carousel-info">
             <div className="content-text-1">
-              <span className="span">Delicious</span>
+              <span className="span">Deliciosa</span>
               <h1>Cocina Italiana</h1>
               <p>
-                Si tienes hambre y quieres pedir comida a domicilio, Mickuy
-                Pizzas es la mejor opción.
+                Si tienes hambre y quieres pedir comida a domicilio, Pizzas Mickuy
+                es la mejor opción.
               </p>
               <p>
                 <Link to="/products" className="btn btn-order">
@@ -86,7 +86,7 @@ export const PrincipalScreen = () => {
               />
             </div>
             <div className="content-text-1 context-text-2">
-              <span className="span">Crunchy</span>
+              <span className="span">Crujiente</span>
               <h1>Pizza Italiana</h1>
               <p>
                 Si tienes hambre y quieres pedir comida a domicilio, Mickuy
@@ -115,7 +115,7 @@ export const PrincipalScreen = () => {
             <div className="content-text-1 content-text-3">
               <span className="span">Bienvenidos!</span>
               <h1>Cocinamos tu receta de pizza deseada</h1>
-              <p>ASÍ ES COMO AGREGAMOS MÁS DE 60 AÑOS DE AMOR A TU PIZZA</p>
+              <p>ASÍ ES COMO AGREGAMOS AMOR A TU PIZZA</p>
               <p>
                 <Link to="/products" className="btn btn-order">
                   Ordenar Ahora
@@ -131,7 +131,7 @@ export const PrincipalScreen = () => {
           <div className="info-item">
             <div className="d-inline">
               <PhoneIcon style={{ color: yellow[500], fontSize: 20 }} />
-              <p>015780023</p>
+              <p>926513695</p>
             </div>
 
             <p>Abierto de 12:00pm - 11:00pm</p>
@@ -139,9 +139,9 @@ export const PrincipalScreen = () => {
           <div className="info-item">
             <div className="d-inline">
               <GpsFixedIcon style={{ color: yellow[500], fontSize: 20 }} />
-              <p>Avenida Alfredo Benavides 871</p>
+              <p>Avenida Nuevo Horizonte Carapongo - Los Álamos</p>
             </div>
-            <p>Mickuy Pizzas - Local n°1</p>
+            <p>Mickuy Pizzas</p>
           </div>
           <div className="info-item">
             <div className="d-inline">

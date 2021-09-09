@@ -10,10 +10,9 @@ export const Footer = () => {
       <div className="footer__nosotros">
         <h3>Nosotros</h3>
         <p>
-          Nuestra pizza es única e inigualable. Creamos y creemos en una pizza
-          saludable y que invita a compartir buenos y divertidos momentos con
-          las personas que nos rodean. El secreto de una pizza saludable está en
-          su masa...
+        Mikuy es una palabra que representa la experiencia de sentarse a comer con los seres queridos. 
+        La emoción que representa compartir una comida con personas especiales fue el motivo principal para
+        crear esta pequeña empresa.
         </p>
       </div>
       <div className="footer__servicios">
@@ -34,11 +33,11 @@ export const Footer = () => {
         <h3>Contactos</h3>
         <div className="footer__contactos-item">
           <PhoneIcon style={{ color: "white", fontSize: 20 }} />
-          <p>015780023</p>
+          <p>926513695</p>
         </div>
         <div className="footer__contactos-item">
           <GpsFixedIcon style={{ color: "white", fontSize: 20 }} />
-          <p>Avenida Alfredo Benavides 871</p>
+          <p>Avenida Nuevo Horizonte Carapongo - Los Álamos</p>
         </div>
         <div className="footer__contactos-item">
           <QueryBuilderIcon style={{ color: "white", fontSize: 20 }} />
