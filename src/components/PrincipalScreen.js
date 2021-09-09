@@ -14,6 +14,7 @@ import { yellow } from "@material-ui/core/colors";
 import LocalPizzaIcon from "@material-ui/icons/LocalPizza";
 import Icon from "@material-ui/core/Icon";
 import { loadCSS } from "fg-loadcss";
+import { Footer } from "./Footer";
 //import { Height } from "@material-ui/icons";
 
 export const PrincipalScreen = () => {
@@ -240,6 +241,7 @@ export const PrincipalScreen = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

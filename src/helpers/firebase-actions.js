@@ -1,3 +1,4 @@
+import { deleteAll } from "../actions/shoppingCart";
 import { firebase } from "./../firebase/firebase-config";
 export const addBuyFirebase = (
   nombre,
@@ -6,7 +7,8 @@ export const addBuyFirebase = (
   direccion,
   referencia,
   shoppingCart,
-  precio
+  precio,
+  dispatch
 ) => {
   firebase.firestore().collection("orders").add({
     nombre,
@@ -20,4 +22,5 @@ export const addBuyFirebase = (
     precio,
   });
   console.log("guardado en firebase claro k si");
+  dispatch(deleteAll());
 };

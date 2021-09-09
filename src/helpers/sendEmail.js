@@ -1,6 +1,13 @@
 import emailjs from "emailjs-com";
 import Swal from "sweetalert2";
-export const sendEmail = (nombre, email, telefono, direccion, referencia) => {
+export const sendEmail = (
+  nombre,
+  email,
+  telefono,
+  direccion,
+  referencia,
+  history
+) => {
   emailjs
     .send(
       "service_nptoez9",
@@ -23,6 +30,8 @@ export const sendEmail = (nombre, email, telefono, direccion, referencia) => {
             title: "title-swal2",
             popup: "container-swal2",
           },
+        }).then((e) => {
+          history.push("/");
         });
       },
       function (error) {

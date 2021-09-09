@@ -1,0 +1,30 @@
+.footer {
+  background-color: black;
+  padding: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  h3 {
+    color: #d9d9da;
+  }
+  div {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    color: gray;
+  }
+  .footer__servicios-links {
+    display: flex;
+    flex-direction: column;
+    a {
+      color: gray;
+    }
+  }
+}
+.footer__nosotros p {
+  text-align: justify;
+}
+.footer__contactos-item {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.5rem;
+}
